@@ -1,4 +1,4 @@
-package 최빈값구하기;
+package LevelZero.최빈값구하기;
 
 /**
  * @author : ljw6398@nets.co.kr

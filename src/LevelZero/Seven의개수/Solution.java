@@ -1,4 +1,4 @@
-package Seven의개수;
+package LevelZero.Seven의개수;
 
 /**
  * @author : ljw6398@nets.co.kr

@@ -1,4 +1,4 @@
-package 숫자찾기;
+package LevelZero.숫자찾기;
 
 /**
  * @author : ljw6398@nets.co.kr

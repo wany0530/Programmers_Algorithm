@@ -1,4 +1,4 @@
-package 평행;
+package LevelZero.평행;
 
 /**
  * @author : ljw6398@nets.co.kr

@@ -1,4 +1,4 @@
-package 다음에올숫자;
+package LevelZero.다음에올숫자;
 
 /**
  * @author : ljw6398@nets.co.kr

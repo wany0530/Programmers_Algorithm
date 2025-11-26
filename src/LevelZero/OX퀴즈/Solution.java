@@ -1,4 +1,4 @@
-package OX퀴즈;
+package LevelZero.OX퀴즈;
 
 /**
  * @author : ljw6398@nets.co.kr

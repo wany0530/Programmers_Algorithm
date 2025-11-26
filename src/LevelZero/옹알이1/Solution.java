@@ -1,4 +1,4 @@
-package 옹알이1;
+package LevelZero.옹알이1;
 
 /**
  * @author : ljw6398@nets.co.kr

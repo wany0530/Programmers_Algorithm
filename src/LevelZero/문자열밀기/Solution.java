@@ -1,5 +1,5 @@
 
-package 문자열밀기;
+package LevelZero.문자열밀기;
 
 /**
  * @author : ljw6398@nets.co.kr

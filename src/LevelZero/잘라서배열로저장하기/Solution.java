@@ -1,4 +1,4 @@
-package 잘라서배열로저장하기;
+package LevelZero.잘라서배열로저장하기;
 
 /**
  * @author : ljw6398@nets.co.kr

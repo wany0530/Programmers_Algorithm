@@ -1,4 +1,4 @@
-package 연속된수의합;
+package LevelZero.연속된수의합;
 
 import java.util.ArrayList;
 import java.util.List;

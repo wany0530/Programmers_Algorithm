@@ -1,4 +1,4 @@
-package 분수의덧셈;
+package LevelZero.분수의덧셈;
 
 /**
  * @author : ljw6398@nets.co.kr

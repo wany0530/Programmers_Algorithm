@@ -1,4 +1,4 @@
-package 다항식더하기;
+package LevelZero.다항식더하기;
 
 /**
  * @author : ljw6398@nets.co.kr

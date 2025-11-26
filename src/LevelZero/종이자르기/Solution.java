@@ -1,4 +1,4 @@
-package 종이자르기;
+package LevelZero.종이자르기;
 
 /**
  * @author : ljw6398@nets.co.kr

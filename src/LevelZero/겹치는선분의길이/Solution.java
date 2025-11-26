@@ -1,4 +1,4 @@
-package 겹치는선분의길이;
+package LevelZero.겹치는선분의길이;
 
 import java.util.*;
 import java.util.function.Function;
