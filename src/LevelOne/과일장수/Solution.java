@@ -1,8 +1,6 @@
 package LevelOne.과일장수;
 
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.stream.IntStream;
 
 public class Solution
 {
