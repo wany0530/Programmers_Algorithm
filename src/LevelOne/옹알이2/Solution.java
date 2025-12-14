@@ -8,39 +8,28 @@ public class Solution
     {
         String[] babbling = {"ayaye", "uuu", "yeye", "yemawoo", "ayaayaa"};
         String[] pronunciation = {"aya", "ye", "woo", "ma"};
-
+        String[] repeatPronunciation = {"ayaaya", "yeye", "woowoo", "mama"};
         int result = 0;
-        for(int i = 0; i<babbling.length; i++)
+        for(int start = 0; start < babbling.length; start++)
         {
-            String s = babbling[i];
-            for(int start = 1; start<=pronunciation.length; start++)
-            {
-                s = s.replace(pronunciation[start - 1], start+"");
-            }
-
-            try
-            {
-                int target = Integer.parseInt(s);
-            }
-            catch (NumberFormatException e)
+            if(babbling[start].indexOf(repeatPronunciation[0]) != -1 ||
+               babbling[start].indexOf(repeatPronunciation[1]) != -1 ||
+               babbling[start].indexOf(repeatPronunciation[2]) != -1 ||
+               babbling[start].indexOf(repeatPronunciation[3]) != -1)
             {
                 continue;
             }
 
-            int base = 0;
-            boolean isRepeat = false;
-            for(char c : s.toCharArray())
-            {
-                if(base != Character.getNumericValue(c))
-                    base = Character.getNumericValue(c);
-                else
-                    isRepeat = true;
-            }
+            babbling[start] = babbling[start].replace(pronunciation[0], " ");
+            babbling[start] = babbling[start].replace(pronunciation[1], " ");
+            babbling[start] = babbling[start].replace(pronunciation[2], " ");
+            babbling[start] = babbling[start].replace(pronunciation[3], " ");
+            babbling[start] = babbling[start].replace(" ", "");
 
-            if(!isRepeat)
+            if(babbling[start].length() == 0)
                 result++;
         }
 
-        String a= "";
+
     }
 }
