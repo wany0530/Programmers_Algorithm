@@ -9,65 +9,56 @@ public class Solution
     {
         String[] surveyArr = {"AN", "CF", "MJ", "RT", "NA"};
         int[] choices = {5, 3, 2, 7, 5};
-
+        String[] standard = {"RT", "CF", "JM", "AN"};
         Map<String, Integer> map = new HashMap<>();
+        map.put("R", 0);
+        map.put("T", 0);
+        map.put("C", 0);
+        map.put("F", 0);
+        map.put("J", 0);
+        map.put("M", 0);
+        map.put("A", 0);
+        map.put("N", 0);
+
+        StringBuilder answer = new StringBuilder();
         for(int i=0; i<surveyArr.length; i++)
         {
             String survey = surveyArr[i];
-            int choice = choices[i];
+            int score = choices[i] - 4;
 
+            String animal = score >= 0 ? survey.substring(1, 2) : survey.substring(0, 1);
+            map.computeIfPresent(animal, (k, v) -> v + Math.abs(score));
         }
+
+        for(int start=0; start<standard.length; start++)
+        {
+            String charaterOne = standard[start].substring(0, 1);
+            String charaterTwo = standard[start].substring(1, 2);
+
+
+            if(map.get(charaterOne) >= map.get(charaterTwo))
+                answer.append(charaterOne);
+            else
+                answer.append(charaterTwo);
+        }
+
+        System.out.println("answer.toString() = " + answer.toString());
     }
 
-    private static class Survey
+    private static class Animal
     {
-        private String character;
-        private int score;
-        private String character2;
-        private int score2;
-
-        public Survey(String character, String character2)
-        {
-            this.character = character;
-            this.character2 = character2;
-        }
-    }
-
-    private enum Choice
-    {
-        VeryDisAgree( 1, 3)
-        , DisAgree(2, 2)
-        , LittleDisAgree(3, 1)
-        , Commonly(4, 0)
-        , LittleAgree(5, 1)
-        , Agree(6, 2)
-        , VeryAgree(7, 3);
-
-        private int choise;
+        private String name;
         private int score;
 
-        Choice(int choise, int score)
+        public Animal(String name, int score)
         {
-            this.choise = choise;
+            this.name = name;
             this.score = score;
         }
 
-        public int getScore(int choise)
+        public String getName()
         {
-            for(Choice c : Choice.values())
-            {
-                if(c.getChoise() == choise)
-                {
-                    return c.getScore();
-                }
-            }
-
-            return 0;
-        }
-
-        public int getChoise()
-        {
-            return choise;
+            return name;
         }
 
         public int getScore()
